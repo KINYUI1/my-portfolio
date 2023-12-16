@@ -1,14 +1,30 @@
+import express from '../images/ExpressJS.png'
+import git from '../images/git.png'
+import github from '../images/github.png'
+import java from '../images/java.png'
+import javascript from '../images/javascript.png'
+import node from '../images/nodejs.png'
+import react from '../images/reactjs.png'
+import reduxjs from '../images/redux.png'
+import selenium from '../images/selenium.png'
+import styledComponent from '../images/styled-component.png'
+import tailwind from '../images/tailwind.png'
+import mongodb from '../images/mongodb.jpg'
+import mongoose from '../images/mongoosejs.png'
+import html from '../images/html5.png'
+import css from '../images/css3.png'
+
 
 
 
 export const skills = [
     {
         name:'HTML 5',
-        image:'../images/html5.png'
+        image:html
     },
     {
         name:'CSS 3',
-        image:'../images/css3.png'
+        image:css
     },
     {
         name:'javaScript',
@@ -16,35 +32,35 @@ export const skills = [
     },
     {
         name:'react JS',
-        image:'../images/reactjs.png'
+        image:react
     },
     {
         name:'redux',
-        image:'../images/redux.png'
+        image:reduxjs
     },
     {
         name:'node JS',
-        image:'../images/nodejs.png'
+        image:node
     },
     {
         name:'express js',
-        image:'../images/ExpressJS.png'
+        image:express
     },
     {
         name:'mongo DB',
-        image:'../images/mongodb.jpg'
+        image:mongodb
     },
     {
         name:'Mongoose ODM',
-        image:'../images/mongoosejs.png'
+        image:mongoose
     },
     {
         name:'git',
-        image:'../images/git.png'
+        image:git
     },
     {
         name:'gitHub',
-        image:'../images/github.png'
+        image:github
     },
     {
         name:'java',
@@ -52,18 +68,18 @@ export const skills = [
     },
     {
         name:'python',
-        image:'../images/Python.png'
+        image:'/Python.png'
     },
     {
         name:'selenium',
-        image:'../images/selenium.png'
+        image:selenium
     },
     {
         name:'styled component',
-        image:'../images/styled-component.png'
+        image:styledComponent
     },
     {
         name:'tailwind CSS',
-        image:'../images/tailwind.png'
+        image:tailwind
     },
 ]
