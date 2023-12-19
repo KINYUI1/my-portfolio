@@ -59,7 +59,7 @@ const Home = () => {
               <CiMail />
             </Link>
           </div>
-          <a href="#"><button className=" p-3 text-xl uppercase font-bold  bg-stone-700  hover:bg-yellow-100 hover:text-stone-700 hover:scale-110 ease-in duration-300 text-slate-50 rounded shadow-lg shadow-stone-600">resume <MdDownload className="inline"/></button> </a>
+          <a href='./Clement Kinyui Ndi Resume.docx' download='clement kinyui ndimuangu resume.docx'><button className=" p-3 text-xl uppercase font-bold  bg-stone-700  hover:bg-yellow-100 hover:text-stone-700 hover:scale-110 ease-in duration-300 text-slate-50 rounded shadow-lg shadow-stone-600">resume <MdDownload className="inline"/></button> </a>
         </div>
       </div>
     </div>

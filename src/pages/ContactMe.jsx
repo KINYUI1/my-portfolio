@@ -1,5 +1,5 @@
 import contactImg from '../images/contactMe.jpg'
-import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub,FaDownload } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser"
@@ -65,10 +65,9 @@ const sendEmail = (e) => {
           </div>
           <div className="w-12 h-12 bg-stone-700 flex justify-center items-center rounded-full hover:bg-yellow-100 hover:text-stone-700 hover:scale-110 ease-in duration-300 text-slate-50">
             <a
-              href="https://github.com/KINYUI1?tab=repositories"
-              target="blank"
+              href='./Clement Kinyui Ndi Resume.docx' download='clement kinyui ndimuangu resume.docx'
             >
-              <FaGithub />
+              <FaDownload />
             </a>
           </div>
         </div>

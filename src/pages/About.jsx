@@ -4,6 +4,7 @@ import workSetup from "../images/workSetup.jpg";
 import experienceData from '../data/experienceData'
 import {MdDownload} from 'react-icons/md'
 
+
 const About = () => {
   const info = {
     title:'About',
@@ -41,7 +42,7 @@ const About = () => {
       <div>
         <div className="flex gap-8 items-center">
         <h1 className="capitalize font-bold text-4xl">experience</h1>
-        <a href="#"><button className="mt-2 p-3 text-xl uppercase font-bold  bg-stone-700  hover:bg-yellow-100 hover:text-stone-700 hover:scale-110 ease-in duration-300 text-slate-50 rounded shadow-lg shadow-stone-600">resume <MdDownload className="inline"/></button> </a>
+        <a href='./Clement Kinyui Ndi Resume.docx' download='clement kinyui ndimuangu resume.docx'><button className="mt-2 p-3 text-xl uppercase font-bold  bg-stone-700  hover:bg-yellow-100 hover:text-stone-700 hover:scale-110 ease-in duration-300 text-slate-50 rounded shadow-lg shadow-stone-600">resume <MdDownload className="inline"/></button> </a>
         </div>
         <div>
           {experienceData.map((experience)=>{
