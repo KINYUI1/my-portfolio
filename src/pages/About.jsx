@@ -11,7 +11,7 @@ const About = () => {
     intro:'who am i'
   }
   return (
-    <div className="bg-blue-50 py-8 sm:px-40">
+    <div className="py-8 sm:px-40">
       <Headings {...info}/>
       <div className="grid sm:grid-cols-3 gap-8">
         <div className="max-w-md">
@@ -19,7 +19,7 @@ const About = () => {
         </div>
         <div className="leading-7 text-base sm:col-span-2 m-2">
           <p className="mb-4">
-            Passionate about software engineering, I hold a degree in Computer Science from the <span className="font-bold">University of Bamenda</span> and a certificate in software engineering and working experience from <span className="font-bold">Per Scholas</span>, providing a robust foundation in
+            Passionate about software engineering, I hold a certificate in software engineering and working experience from <span className="font-bold">Per Scholas</span>, providing a robust foundation in
             programming languages, algorithms, and data structures. My love for
             this field extends beyond academic achievements, driving me to stay
             current with industry trends and technologies. I am adept at rapid

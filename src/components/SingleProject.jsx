@@ -6,7 +6,8 @@ const SingleProject = (project) => {
   return (
     <div>
         <NavLink to={`/project/${id}`}>
-        <img src={image} alt={name} className="w-80"/>
+        <img src={image} alt={name} className="max-w-1xl"/>
+        <h3>{name}</h3>
         </NavLink>
     </div>
   )

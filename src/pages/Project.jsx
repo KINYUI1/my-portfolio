@@ -6,12 +6,12 @@ const Project = () => {
   const {name,overview,technologies,github,deployed,image} = singleProject
   console.log(name);
   return (
-    <div className='mx-32'>
+    <div className='sm:mx-32'>
       <div className='mx-auto my-10 '>
         <img src={image} alt={name} className='w-4/5 mx-auto'/>
       </div>
       <div className="border-b border-black my-8" ></div>
-      <div className='flex gap-8 mb-4'>
+      <div className=' mx-10 gap-8 mb-4 sm:flex'>
         <div>
           <h2 className='text-5xl capitalize my-4'>overview</h2>
           <p className='my-4'>{overview}</p>

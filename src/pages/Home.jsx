@@ -6,8 +6,8 @@ import {MdDownload} from 'react-icons/md'
 
 const Home = () => {
   return (
-    <div className="bg-blue-50 px-8 sm:px-40 py-10 h-screen md:grid grid-cols-3">
-      <div className="w-96 flex justify-center m-auto sm:justify-normal">
+    <div className="sm:grid sm:grid-cols-1 sm:px-40 py-10 h-screen md:grid-cols-3">
+      <div className="mx-auto my-auto">
         <img
           src={author}
           alt="A picture of Clement Kinyui Ndimuangu"
