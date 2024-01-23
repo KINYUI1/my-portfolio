@@ -5,7 +5,7 @@ import { nanoid } from 'nanoid';
 
 const Navbar = () => {
   return (
-    <div className='flex justify-between py-4 sticky top-0 shadow-xl px-4 z-10'>
+    <div className='flex justify-between py-4 sticky top-0 shadow-xl px-4 z-20'>
     <h1 className='font-bold text-3xl'>Clement K. Ndimuangu</h1>
     <nav className='flex gap-11 uppercase flex-col md:flex-row'>
         {data.map((item)=>{

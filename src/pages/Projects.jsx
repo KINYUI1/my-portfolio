@@ -7,11 +7,11 @@ const Projects = () => {
     intro:'some of my projects'
   }
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen mx-auto">
       <div className="px-2 py-8 sm:px-24 md:px80">
         <Headings {...info} />
       </div>
-      <div className="mx-12 py-8 sm:px-10 sm:grid grid-cols-2 mx-auto gap-8">
+      <div className="mx-12 py-8 sm:px-auto sm:grid grid-cols-2 md:px-20 md:mx-auto gap-8">
         {/* projects to enter here */}
         {projectsData.map((project)=>{
           return <SingleProject {...project} key={project.id}/>
