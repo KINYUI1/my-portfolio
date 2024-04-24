@@ -5,8 +5,8 @@ import node from '../images/nodejs.png'
 import react from '../images/reactjs.png'
 import reduxjs from '../images/redux.png'
 import selenium from '../images/selenium.png'
-import styledComponent from '../images/styled-component.png'
-import tailwind from '../images/tailwind.png'
+import postgresql from '../images/postgresql.png'
+import springboot from '../images/spring-boot.png'
 import mongodb from '../images/mongodb.jpg'
 import mongoose from '../images/mongoosejs.png'
 import html from '../images/html5.png'
@@ -73,11 +73,11 @@ export const skills = [
         image:selenium
     },
     {
-        name:'styled component',
-        image:styledComponent
+        name:'Postgre SQL',
+        image:postgresql
     },
     {
-        name:'tailwind CSS',
-        image:tailwind
+        name:'Sring Boot',
+        image:springboot
     },
 ]
