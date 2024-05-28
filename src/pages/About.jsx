@@ -19,7 +19,7 @@ const About = () => {
         </div>
         <div className="leading-7 text-base sm:col-span-2 m-2">
           <p className="mb-4">
-            Passionate about software engineering, I hold a Bachelors Degree from the university of Bamenda and working experience from <span className="font-bold">Per Scholas</span> and <span className="font-bold">JP IT STAFFING</span>, providing a robust foundation in
+            Passionate about software engineering, I hold an Associate Degree from the university of Bamenda(Cameroon) and working experience from <span className="font-bold">Per Scholas</span>, providing a robust foundation in
             programming languages, algorithms, and data structures. My love for
             this field extends beyond academic achievements, driving me to stay
             current with industry trends and technologies. I am adept at rapid
