@@ -1,21 +1,22 @@
 import Headings from "../components/Headings";
 import SingleProject from "../components/SingleProject";
 import projectsData from '../data/projectsData'
+
 const Projects = () => {
   const info = {
-    title:'projects',
-    intro:'some of my projects'
+    title:'Projects',
+    intro:'Showcase of my recent work'
   }
   return (
-    <div className="min-h-screen mx-auto">
-      <div className="px-2 py-8 sm:px-24 md:px80">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-indigo-50 to-slate-100 py-12 px-4 sm:px-6 lg:px-8 page-transition">
+      <div className="max-w-7xl mx-auto">
         <Headings {...info} />
-      </div>
-      <div className="mx-12 py-8 sm:px-auto sm:grid grid-cols-2 md:px-20 md:mx-auto gap-8">
-        {/* projects to enter here */}
-        {projectsData.map((project)=>{
-          return <SingleProject {...project} key={project.id}/>
-        })}
+        
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projectsData.map((project)=>{
+            return <SingleProject {...project} key={project.id}/>
+          })}
+        </div>
       </div>
     </div>
   )

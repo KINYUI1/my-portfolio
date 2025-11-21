@@ -7,99 +7,184 @@ import { useRef } from 'react';
 import { toast} from 'react-toastify';
 import Headings from "../components/Headings";
 
-
-
 const ContactMe = () => {
   const info = {
-    title:'Contact me',
-    intro:'send me an email'
+    title:'Get In Touch',
+    intro:"Let's work together"
   }
 
-const form = useRef();
+  const form = useRef();
 
-const sendEmail = (e) => {
-  e.preventDefault();
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-  emailjs.sendForm('service_0qlkhaj', 'template_k6ofdep', form.current, '8apBThDvOGpozBB14')
-    .then((result) => {
-        console.log(result.text);
-        toast.success("message sent")
-    }, (error) => {
-        console.log(error.text);
-        toast.error("something went wrong message not sent")
-    });
-};
+    emailjs.sendForm('service_0qlkhaj', 'template_k6ofdep', form.current, '8apBThDvOGpozBB14')
+      .then((result) => {
+          console.log(result.text);
+          toast.success("Message sent successfully!")
+          e.target.reset();
+      }, (error) => {
+          console.log(error.text);
+          toast.error("Something went wrong. Please try again.")
+      });
+  };
 
   return (
-    <div>
-      <div className="px-32 py-8 sm:px-40">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-indigo-50 to-slate-100 py-12 px-4 sm:px-6 lg:px-8 page-transition">
+      <div className="max-w-7xl mx-auto">
         <Headings {...info} />
-      </div>
-    <div className='px-40 grid grid-cols-3 gap-10 h-screen'>
-      <div className='shadow-2xl p-2 rounded-xl max-w-xl 2xl:h-5/6'>
-        <img src={contactImg} alt="contact image" className='rounded-xl'/>
-        <h2 className='capitalize text-5xl pt-4 font-bold text-center text-shadow'>clement kinyui ndimuangu</h2>
-        <h3 className='text-3xl capitalize font-bold text-center pt-4'>full stack developer</h3>
-        <p className='text-xl text-center pt-4'>Available for full-time,part time and contract positions.Contact me let's talk</p>
-        <div className="flex gap-10 justify-center py-4">
-          <div className="w-12 h-12 bg-stone-700 flex justify-center items-center rounded-full hover:bg-yellow-100 hover:text-stone-700 hover:scale-110 ease-in duration-300 text-slate-50">
-            <a
-              href="https://www.linkedin.com/in/clement-kinyui-ndimuangu-11876b250"
-              target="blank"
-            >
-              <FaLinkedinIn />
-            </a>
+        
+        <div className='mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8'>
+          {/* Profile Card */}
+          <div className='lg:col-span-1'>
+            <div className='bg-white shadow-2xl rounded-2xl overflow-hidden hover:shadow-3xl transition-shadow duration-300'>
+              <div className='relative'>
+                <img 
+                  src={contactImg} 
+                  alt="contact" 
+                  className='w-full h-64 object-cover'
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              </div>
+              
+              <div className='p-6 space-y-4'>
+                <h2 className='text-3xl font-bold text-gray-900 text-center'>
+                  Clement Kinyui Ndimuangu
+                </h2>
+                <h3 className='text-xl font-semibold text-indigo-600 text-center'>
+                  Full Stack Developer
+                </h3>
+                <p className='text-gray-600 text-center leading-relaxed'>
+                  Available for full-time, part-time and contract positions. Contact me and let's talk!
+                </p>
+                
+                <div className="flex gap-4 justify-center pt-4">
+                  <a
+                    href="https://www.linkedin.com/in/clement-kinyui-ndimuangu-11876b250"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-gray-800 flex justify-center items-center rounded-full hover:bg-indigo-600 transform hover:scale-110 transition-all duration-300 text-white shadow-lg"
+                    aria-label="LinkedIn"
+                  >
+                    <FaLinkedinIn />
+                  </a>
+                  <a
+                    href="https://github.com/KINYUI1?tab=repositories"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-gray-800 flex justify-center items-center rounded-full hover:bg-indigo-600 transform hover:scale-110 transition-all duration-300 text-white shadow-lg"
+                    aria-label="GitHub"
+                  >
+                    <FaGithub />
+                  </a>
+                  <Link 
+                    to="/contact-me"
+                    className="w-12 h-12 bg-gray-800 flex justify-center items-center rounded-full hover:bg-indigo-600 transform hover:scale-110 transition-all duration-300 text-white shadow-lg"
+                    aria-label="Email"
+                  >
+                    <CiMail className="text-xl" />
+                  </Link>
+                  <a
+                    href='/Clement Ndimuangu.docx' 
+                    download='Clement Ndimuangu Resume.docx'
+                    className="w-12 h-12 bg-gray-800 flex justify-center items-center rounded-full hover:bg-indigo-600 transform hover:scale-110 transition-all duration-300 text-white shadow-lg"
+                    aria-label="Download Resume"
+                  >
+                    <FaDownload />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="w-12 h-12 bg-stone-700 flex justify-center items-center rounded-full hover:bg-yellow-100 hover:text-stone-700 hover:scale-110 ease-in duration-300 shadow-xg shadow-stone-600 text-slate-50">
-            <a
-              href="https://github.com/KINYUI1?tab=repositories"
-              target="blank"
-            >
-              <FaGithub />
-            </a>
-          </div>
-          <div className="w-12 h-12 bg-stone-700 flex justify-center items-center rounded-full hover:bg-yellow-100 hover:text-stone-700 hover:scale-110 ease-in duration-300 text-slate-50">
-            <Link to="/contact-me">
-              <CiMail />
-            </Link>
-          </div>
-          <div className="w-12 h-12 bg-stone-700 flex justify-center items-center rounded-full hover:bg-yellow-100 hover:text-stone-700 hover:scale-110 ease-in duration-300 text-slate-50">
-            <a
-              href='./Clement Kinyui Ndimuangu Resume.docx' download='clement kinyui ndimuangu resume.docx'
-            >
-              <FaDownload />
-            </a>
+
+          {/* Contact Form */}
+          <div className='lg:col-span-2'>
+            <div className='bg-white shadow-2xl rounded-2xl p-6 sm:p-8 hover:shadow-3xl transition-shadow duration-300'>
+              <h3 className='text-2xl font-bold text-gray-900 mb-6'>Send me a message</h3>
+              
+              <form ref={form} onSubmit={sendEmail} className='space-y-6'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
+                  <div>
+                    <label htmlFor="name" className='block text-sm font-semibold text-gray-700 mb-2'>
+                      Name *
+                    </label>
+                    <input 
+                      type="text" 
+                      id='name' 
+                      name='name' 
+                      required
+                      className='w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 transition-all duration-300 outline-none'
+                      placeholder='Your name'
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="phone" className='block text-sm font-semibold text-gray-700 mb-2'>
+                      Phone
+                    </label>
+                    <input 
+                      type="tel" 
+                      id='phone' 
+                      name='number' 
+                      className='w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 transition-all duration-300 outline-none'
+                      placeholder='Your phone number'
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="email" className='block text-sm font-semibold text-gray-700 mb-2'>
+                    Email *
+                  </label>
+                  <input 
+                    type="email" 
+                    id='email' 
+                    name='email' 
+                    required
+                    className='w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 transition-all duration-300 outline-none'
+                    placeholder='your.email@example.com'
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="subject" className='block text-sm font-semibold text-gray-700 mb-2'>
+                    Subject *
+                  </label>
+                  <input 
+                    type="text" 
+                    id='subject' 
+                    name='subject' 
+                    required
+                    className='w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 transition-all duration-300 outline-none'
+                    placeholder='What is this about?'
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="message" className='block text-sm font-semibold text-gray-700 mb-2'>
+                    Message *
+                  </label>
+                  <textarea 
+                    id='message' 
+                    name='message' 
+                    required
+                    rows="6"
+                    className='w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 transition-all duration-300 outline-none resize-none'
+                    placeholder='Your message here...'
+                  />
+                </div>
+
+                <button 
+                  type="submit" 
+                  className='w-full sm:w-auto px-8 py-4 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl'
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-      <div className='shadow-2xl p-2 col-span-2 rounded-xl 2xl:h-5/6'>
-        <form ref={form} onSubmit={sendEmail}>
-          <div className='sm:grid grid-cols-2 gap-4'>
-            <div className=''>
-            <label htmlFor="name" className='block pt-4'>NAME</label>
-            <input type="text" id='name' name='name' className='h-12 border-zinc-800 border-4 rounded-xl w-full' />
-            </div>
-            <div className=''>
-            <label htmlFor="phone" className='block pt-4'>PHONE</label>
-            <input type="number" id='phone' name='number' className='h-12 border-zinc-800 border-4 rounded-xl w-full'/>
-            </div>
-          </div>
-          <div className=''>
-            <label htmlFor="email" className='block pt-4'>EMAIL</label>
-            <input type="email" id='email' name='email' className='h-12 border-zinc-800 border-4 rounded-xl w-full'/>
-            </div>
-          <div className=''>
-            <label htmlFor="subject" className='block pt-4'>SUBJECT</label>
-            <input type="text" id='subject' name='subject' className='h-12 border-zinc-800 border-4 rounded-xl w-full'/>
-            </div>
-          <div className='mb-6'>
-            <label htmlFor="message" className='block pt-4'>MESSAGE</label>
-            <textarea type="text" id='message' name='message' className='h-40 border-zinc-800 border-4 rounded-xl w-full'/>
-            </div>
-            <button type="submit" className='bg-stone-700 px-8 text-white h-10 rounded-lg w-full hover:scale-105 ease-in duration-200 sm:w-52 m-auto flex justify-center items-center  hover:bg-yellow-100 hover:text-black'>SEND</button>
-        </form>
-      </div>
-    </div>
     </div>
   )
 }
