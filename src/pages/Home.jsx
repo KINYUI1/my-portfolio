@@ -1,4 +1,4 @@
-import author from "../images/author.PNG";
+import author from "../images/author.png";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import { Link } from "react-router-dom";
