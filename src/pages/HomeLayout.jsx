@@ -15,10 +15,10 @@ const HomeLayout = () => {
   }, [location, displayLocation])
 
   return (
-    <div className="bg-slate-50 font-thin">
+    <div className="bg-dark-100 min-h-screen">
       <Navbar/>
       <div
-        className={`transition-opacity duration-300 ${
+        className={`transition-opacity duration-500 ${
           transitionStage === "fadeOut" ? "opacity-0" : "opacity-100"
         }`}
         onTransitionEnd={() => {
